@@ -1,0 +1,6 @@
+.opacity {
+background: transparent;
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C221401,endColorstr=#4C221401)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C221401,endColorstr=#4C221401);   /* IE6 & 7 */
+      zoom: 1;
+}

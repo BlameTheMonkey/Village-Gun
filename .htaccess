@@ -1,0 +1,20 @@
+# This first item is from original file
+AddHandler php-stable .php
+
+# Disable the server signature
+ServerSignature Off
+
+# Disable ETags
+ FileETag none
+ <IfModule mod_headers.c>
+	Header unset ETag
+ </IfModule>
+
+# Block hotlink requests
+# uncomment to enable and edit the domain name and list of file types
+
+<IfModule mod_rewrite.c>
+	RewriteCond %{HTTP_REFERER} !^$
+	RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?villagegun.com [NC]
+	RewriteRule \.(gif|jpe?g?|png)$ - [NC,F,L]
+</IfModule>
